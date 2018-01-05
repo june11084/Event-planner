@@ -12,9 +12,21 @@ public class EventTest {
     }
 
     @Test
-    public void takesUserInputGuest() {
+    public void checkUserInputGuestNumber() {
         int guestNumber = 10;
         assertEquals(true, guestNumber==10);
     }
 
+    @Test
+    public void checkAddedCost() {
+        Event event = new Event();
+        assertEquals(10, event.checkAddedCost(10));
+    }
+
+    @Test
+    public void checkTotalCost() {
+        Event event = new Event();
+        int testCost = event.cost + 20;
+        assertEquals(testCost, event.getCost()+20);
+    }
 }

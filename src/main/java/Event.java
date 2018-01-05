@@ -10,6 +10,11 @@ public class Event {
         cost += increase;
     }
 
+    public static int checkAddedCost(int increase){
+        cost += increase;
+        return cost;
+    }
+
     public static int getCost(){
         return cost;
     }

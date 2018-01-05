@@ -29,7 +29,7 @@ public class App {
             if(ans.charAt(0)=='y'||ans.charAt(0)=='Y'){
                 Event.addCost(20);
             } else {}
-            System.out.println("Your total cost is: " + Event.getCost());
+            System.out.println("Your total cost is roughly: " + Event.getCost());
         }
         catch (IOException e){
             e.printStackTrace();
