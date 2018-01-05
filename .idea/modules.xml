@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Event-planner.iml" filepath="$PROJECT_DIR$/.idea/modules/Event-planner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Event-planner_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Event-planner_main.iml" group="Event-planner" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Event-planner_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Event-planner_test.iml" group="Event-planner" />
+    </modules>
+  </component>
+</project>
