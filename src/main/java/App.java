@@ -49,7 +49,7 @@ public class App {
                         ans = bufferedReader.readLine();
                     }while(!ans.equalsIgnoreCase("fiveoff"));
                     Event.reduceCost(10);
-                    System.out.println("Your total cost is roughly: " + Event.getCost());
+                    System.out.println("Your total cost is: " + Event.getCost());
                 } else {}
             }
         }
