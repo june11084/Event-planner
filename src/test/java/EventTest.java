@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 public class EventTest {
     @Test
-    public void checkUserInputYes() {
+    public void checkUserInput_Yes() {
         String ans = "yes";
         String ans1 = "Yes";
         assertEquals(true, ans.charAt(0)=='y');
@@ -12,7 +12,16 @@ public class EventTest {
     }
 
     @Test
-    public void checkUserInputGuestNumber() {
+    public void check_If_UserInputCoupon_Match() {
+        String couponCode = "fiveoff";
+        String ans = "FIVEOFF";
+        String ans1 = "fiveNotOff";
+        assertEquals(true, ans.equalsIgnoreCase("fiveoff"));
+        assertEquals(true, !ans1.equalsIgnoreCase("fiveoff"));
+    }
+
+    @Test
+    public void checkUserInput_GuestNumber() {
         int guestNumber = 10;
         assertEquals(true, guestNumber==10);
     }
