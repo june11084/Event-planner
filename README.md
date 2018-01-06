@@ -26,7 +26,7 @@ IntelliJ IDEA
 
 ## Authors
 
-* **Jun Li** - [thebyronc](https://github.com/june11084)
+* **Jun Li** - [june11084](https://github.com/june11084)
 
 ## License
 
