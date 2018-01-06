@@ -33,6 +33,7 @@ public class EventTest {
     public void checkCorrectTotalCost() {
         Event event = new Event();
         event.addCost(20);
+        event.reduceCost(20);
         int testCost = event.cost;
         assertEquals(testCost, event.getCost());
     }
