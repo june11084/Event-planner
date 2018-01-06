@@ -40,7 +40,7 @@ public class App {
                     System.out.println("Your total cost is roughly: " + Event.getCost());
                 } else {}
             }
-            if(Event.getCost()>=100){
+            if(Event.getCost()>=100&&Event.getCost()<150){
                 System.out.println("You are eligible for 10 dollars off coupon, do you wish to apply? Yes Or No");
                 ans = bufferedReader.readLine();
                 if(ans.charAt(0)=='y'||ans.charAt(0)=='Y'){
@@ -50,6 +50,18 @@ public class App {
                     }while(!ans.equalsIgnoreCase("fiveoff"));
                     Event.reduceCost(10);
                     System.out.println("Your total cost is: " + Event.getCost());
+                } else {}
+            }
+            if(Event.getCost()>=150){
+                System.out.println("You are eligible for 15% off coupon, do you wish to apply? Yes Or No");
+                ans = bufferedReader.readLine();
+                if(ans.charAt(0)=='y'||ans.charAt(0)=='Y'){
+                    do{
+                        System.out.println("please type in the coupon code: fifteenoff");
+                        ans = bufferedReader.readLine();
+                    }while(!ans.equalsIgnoreCase("fifteenoff"));
+                    Event.reduceCostPercent(15);
+                    System.out.println("Your total cost is: " + Event.getFloatCost());
                 } else {}
             }
         }
