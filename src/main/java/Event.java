@@ -10,8 +10,17 @@ public class Event {
         cost += increase;
     }
 
-    public static int checkAddedCost(int increase){
+    public static void reduceCost(int increase){
+        cost -= increase;
+    }
+
+    public static int checkCanAddCost(int increase){
         cost += increase;
+        return cost;
+    }
+
+    public static int checkCanReduceCost(int increase){
+        cost -= increase;
         return cost;
     }
 

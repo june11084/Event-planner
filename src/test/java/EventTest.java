@@ -18,15 +18,22 @@ public class EventTest {
     }
 
     @Test
-    public void checkAddedCost() {
+    public void checkCanAddCost() {
         Event event = new Event();
-        assertEquals(10, event.checkAddedCost(10));
+        assertEquals(10, event.checkCanAddCost(10));
     }
 
     @Test
-    public void checkTotalCost() {
+    public void checkCanReduceCost() {
         Event event = new Event();
-        int testCost = event.cost + 20;
-        assertEquals(testCost, event.getCost()+20);
+        assertEquals(-10, event.checkCanReduceCost(10));
+    }
+
+    @Test
+    public void checkCorrectTotalCost() {
+        Event event = new Event();
+        event.addCost(20);
+        int testCost = event.cost;
+        assertEquals(testCost, event.getCost());
     }
 }
