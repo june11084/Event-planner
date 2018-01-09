@@ -22,28 +22,29 @@ public class EventTest {
 
     @Test
     public void checkUserInput_GuestNumber() {
-        int guestNumber = 10;
-        assertEquals(true, guestNumber==10);
+        Event event = new Event(10,"y","yes", "yes");
+        assertEquals(10, event.guestNumber);
     }
 
     @Test
     public void checkCanAddCost() {
-        event event = new event();
-        assertEquals(10, event.checkCanAddCost(10));
+        Event event = new Event(10,"y","yes", "yes");
+        event.addCost(10);
+        assertEquals(10, event.cost);
     }
 
     @Test
     public void checkCanReduceCost() {
-        event event = new event();
-        assertEquals(-10, event.checkCanReduceCost(10));
+        Event event = new Event(10,"y","yes", "yes");
+        event.reduceCost(10);
+        assertEquals(-10, event.cost);
     }
 
     @Test
-    public void checkCorrectTotalCost() {
-        event event = new event();
-        event.addCost(20);
-        event.reduceCost(20);
-        int testCost = event.cost;
-        assertEquals(testCost, event.getCost());
+    public void checkCanReduceCostPercentage() {
+        Event event = new Event(10,"y","yes", "yes");
+        event.addCost(100);
+        event.reduceCostPercent(10);
+        assertEquals(90, event.getFloatCost(),0.001);
     }
 }

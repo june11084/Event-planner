@@ -7,7 +7,6 @@ public class Event {
     protected String haveDrinks;
     protected String haveEntertainment;
 
-
     public Event(int guestNumber, String haveFood, String haveDrinks, String haveEntertainment) {
         this.guestNumber = guestNumber;
         this.haveFood = haveFood;
@@ -32,16 +31,6 @@ public class Event {
 
     public float getFloatCost(){
         return floatCost;
-    }
-
-    public int checkCanAddCost(int increase){
-        cost += increase;
-        return cost;
-    }
-
-    public int checkCanReduceCost(int increase){
-        cost -= increase;
-        return cost;
     }
 
     public int getCost(){
