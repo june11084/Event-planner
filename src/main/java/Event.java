@@ -1,41 +1,50 @@
 
 public class Event {
-    public static int cost;
-    public static float floatCost;
+    protected int cost;
+    protected float floatCost;
+    protected final int guestNumber;
+    protected String haveFood;
+    protected String haveDrinks;
+    protected String haveEntertainment;
 
-    public Event() {
-          cost = 0;
-          floatCost=0;
+
+    public Event(int guestNumber, String haveFood, String haveDrinks, String haveEntertainment) {
+        this.guestNumber = guestNumber;
+        this.haveFood = haveFood;
+        this.haveDrinks = haveDrinks;
+        this.haveEntertainment = haveEntertainment;
+        cost = 0;
+        floatCost = 0;
     }
 
-    public static void addCost(int increase){
+    public void addCost(int increase){
         cost += increase;
     }
 
-    public static void reduceCost(int increase){
+    public void reduceCost(int increase){
         cost -= increase;
     }
 
-    public static void reduceCostPercent(int increase){
+    public void reduceCostPercent(int increase){
         floatCost = cost;
         floatCost = cost - ((floatCost*increase)/100);
     }
 
-    public static float getFloatCost(){
+    public float getFloatCost(){
         return floatCost;
     }
 
-    public static int checkCanAddCost(int increase){
+    public int checkCanAddCost(int increase){
         cost += increase;
         return cost;
     }
 
-    public static int checkCanReduceCost(int increase){
+    public int checkCanReduceCost(int increase){
         cost -= increase;
         return cost;
     }
 
-    public static int getCost(){
+    public int getCost(){
         return cost;
     }
 

@@ -28,19 +28,19 @@ public class EventTest {
 
     @Test
     public void checkCanAddCost() {
-        Event event = new Event();
+        event event = new event();
         assertEquals(10, event.checkCanAddCost(10));
     }
 
     @Test
     public void checkCanReduceCost() {
-        Event event = new Event();
+        event event = new event();
         assertEquals(-10, event.checkCanReduceCost(10));
     }
 
     @Test
     public void checkCorrectTotalCost() {
-        Event event = new Event();
+        event event = new event();
         event.addCost(20);
         event.reduceCost(20);
         int testCost = event.cost;

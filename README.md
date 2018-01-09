@@ -1,4 +1,4 @@
-# Event Planner
+# event Planner
 
 Helps users to plan for an event by tracking event related tasks and estimating total costs based on activities provided and number of users attending.
 
